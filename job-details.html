@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed job requirements, monthly salary package, company profile, and direct application form on Udaan Jobs.">
+  <title>Job Opportunity Details | Udaan Jobs</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-leap sticky-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-wordmark" href="index.html">
+        <div class="brand-icon"><img src="assets/img/logo.svg" alt="Udaan Jobs Logo"></div>
+        Udaan<span class="accent">Jobs</span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="jobs.html">Find Jobs</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="jobs.html" class="btn btn-leap-ghost">
+            <i class="bi bi-arrow-left"></i> Back to Jobs
+          </a>
+          <a href="contact.html" class="btn btn-leap-outline">Employer Hiring</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Job Detail Banner Header -->
+  <section class="job-detail-header">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="company-logo-badge" id="detailLogo" style="width: 60px; height: 60px; font-size: 1.5rem; background-color: var(--ch-violet-dark); color: #ffffff;">
+              UJ
+            </div>
+            <div>
+              <h1 class="display-font fw-bold fs-2 mb-1" id="detailTitle">Field Sales Executive - B2B Onboarding</h1>
+              <div class="text-muted fw-medium" id="detailCompany">Udaan Express & Logistics • <span class="text-primary"><i class="bi bi-patch-check-fill"></i> Verified Partner</span></div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 align-items-center text-muted small fw-medium">
+            <span><i class="bi bi-geo-alt-fill text-danger me-1"></i> <span id="detailLocation">Bengaluru, Karnataka</span></span>
+            <span><i class="bi bi-briefcase-fill text-primary me-1"></i> <span id="detailExperience">0-2 Yrs</span></span>
+            <span><i class="bi bi-clock-fill text-warning me-1"></i> <span id="detailPostedDate">Posted 1 day ago</span></span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 text-lg-end">
+          <div class="fs-3 fw-bold text-dark mb-3" id="detailSalary">₹22,000 - ₹35,000 / mo</div>
+          <div class="d-flex justify-content-lg-end gap-2">
+            <button class="btn btn-leap-outline" id="detailSaveBtn" onclick="toggleBookmark(currentJobId, this)">
+              <i class="bi bi-bookmark"></i> Save Job
+            </button>
+            <button class="btn btn-leap-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
+              Direct Apply <i class="bi bi-send-fill ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- Left Main Spec -->
+        <div class="col-lg-8">
+          
+          <!-- Role Description -->
+          <div class="bg-white border rounded-4 p-4 mb-4">
+            <h3 class="fw-bold fs-5 mb-3">About The Role</h3>
+            <p class="text-secondary leading-relaxed" id="detailDescription">
+              Join Udaan Express as a Field Sales Executive in Bengaluru! You will onboard local Kirana stores, wholesalers, and retail merchants onto the Udaan B2B commerce network with direct HR call support.
+            </p>
+          </div>
+
+          <!-- Key Responsibilities -->
+          <div class="bg-white border rounded-4 p-4 mb-4">
+            <h3 class="fw-bold fs-5 mb-3">Key Responsibilities</h3>
+            <ul class="text-secondary leading-relaxed ps-3" id="detailResponsibilities">
+              <li class="mb-2">Visit local retail merchants and demonstrate product order app.</li>
+              <li class="mb-2">Achieve daily onboarding targets with weekly performance bonuses.</li>
+              <li class="mb-2">Collect basic merchant KYC documentation.</li>
+              <li class="mb-2">Build strong relationships with regional Kirana store owners.</li>
+            </ul>
+          </div>
+
+          <!-- Perks & Benefits Grid -->
+          <div class="bg-white border rounded-4 p-4 mb-4">
+            <h3 class="fw-bold fs-5 mb-4">Perks & Comprehensive Benefits</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                  <i class="bi bi-telephone-fill text-primary fs-3"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Direct HR Connect</h6>
+                    <small class="text-muted">Instant Phone & WhatsApp SLA</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                  <i class="bi bi-wallet2 text-success fs-3"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Weekly Incentives</h6>
+                    <small class="text-muted">Performance Bonuses & Allowances</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                  <i class="bi bi-shield-check text-warning fs-3"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Zero Candidate Fee</h6>
+                    <small class="text-muted">100% Free Application Process</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                  <i class="bi bi-patch-check-fill text-danger fs-3"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Verified Employer</h6>
+                    <small class="text-muted">Verified Payroll & Workplace</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Sidebar Cards -->
+        <div class="col-lg-4">
+          
+          <!-- Company Summary Card -->
+          <div class="bg-white border rounded-4 p-4 mb-4">
+            <h4 class="fw-bold fs-5 mb-3">Employer Profile</h4>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="company-logo-badge bg-primary text-white" id="sideLogo">UJ</div>
+              <div>
+                <h6 class="fw-bold mb-0" id="sideCompany">Udaan Express</h6>
+                <small class="text-muted">B2B Commerce & Logistics</small>
+              </div>
+            </div>
+            <hr>
+            <div class="small text-secondary space-y-2">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Company Size:</span>
+                <span class="fw-semibold">1,000+ Employees</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Founded:</span>
+                <span class="fw-semibold">2016</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Website:</span>
+                <a href="https://www.udaanjobs.com/" target="_blank" class="fw-semibold text-primary">www.udaanjobs.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job Quick Overview Card -->
+          <div class="bg-white border rounded-4 p-4">
+            <h4 class="fw-bold fs-5 mb-3">Job Snapshot</h4>
+            <ul class="list-unstyled mb-0 small text-secondary">
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted"><i class="bi bi-tag me-2"></i> Category</span>
+                <strong id="sideCategory">Sales & BD</strong>
+              </li>
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted"><i class="bi bi-clock me-2"></i> Employment Type</span>
+                <strong id="sideType">Full-time</strong>
+              </li>
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted"><i class="bi bi-people me-2"></i> Applicants</span>
+                <strong class="text-success">64 Applied</strong>
+              </li>
+              <li class="d-flex justify-content-between py-2">
+                <span class="text-muted"><i class="bi bi-shield-check me-2"></i> Direct Connect</span>
+                <strong class="text-primary">Direct HR Phone Call</strong>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Apply Modal -->
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0">
+        <div class="modal-header border-bottom-0 pb-0">
+          <h5 class="modal-title fw-bold display-font" id="applyModalLabel">Direct Application on Udaan Jobs</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <div class="alert alert-success border-0 mb-3" id="applySuccessAlert" style="display: none;">
+            <i class="bi bi-check-circle-fill me-2"></i> Application submitted! Company HR will call you shortly on your mobile.
+          </div>
+
+          <form id="quickApplyForm">
+            <div class="mb-3">
+              <label for="applicantName" class="form-label small fw-bold">Full Name (Aapka Naam)</label>
+              <input type="text" class="form-control" id="applicantName" required placeholder="e.g. Ramesh Kumar">
+            </div>
+            
+            <div class="mb-3">
+              <label for="applicantEmail" class="form-label small fw-bold">Email Address</label>
+              <input type="email" class="form-control" id="applicantEmail" required placeholder="ramesh@example.com">
+            </div>
+
+            <div class="mb-3">
+              <label for="applicantPhone" class="form-label small fw-bold">Mobile Number (WhatsApp Number)</label>
+              <input type="tel" class="form-control" id="applicantPhone" required placeholder="+91 98765 43210">
+            </div>
+
+            <div class="mb-3">
+              <label for="applicantResume" class="form-label small fw-bold">Upload Resume / Photo ID (Optional/PDF)</label>
+              <input type="file" class="form-control" id="applicantResume" accept=".pdf,.doc,.docx,.jpg,.png">
+            </div>
+
+            <div class="mb-4">
+              <label for="applicantNote" class="form-label small fw-bold">Preferred City & Work Experience</label>
+              <textarea class="form-control" id="applicantNote" rows="2" placeholder="e.g. Bengaluru, 1 year sales experience"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-leap-primary w-100 py-3 fs-6">
+              Confirm & Submit Application
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-leap">
+    <div class="container text-center text-muted small">&copy; 2026 Udaan Jobs Technologies Pvt. Ltd. All rights reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    let currentJobId = 1;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const idParam = parseInt(urlParams.get('id') || '1', 10);
+      
+      const job = JOBS_DATA.find(j => j.id === idParam) || JOBS_DATA[0];
+      currentJobId = job.id;
+
+      document.getElementById('detailTitle').textContent = job.title;
+      document.getElementById('detailCompany').innerHTML = `${job.company} • <span class="text-primary"><i class="bi bi-patch-check-fill"></i> Verified Partner</span>`;
+      document.getElementById('detailLocation').textContent = job.location;
+      document.getElementById('detailExperience').textContent = job.experience;
+      document.getElementById('detailPostedDate').textContent = `Posted ${job.postedDate}`;
+      document.getElementById('detailSalary').textContent = job.salary;
+      document.getElementById('detailDescription').textContent = job.description;
+
+      const logoEl = document.getElementById('detailLogo');
+      logoEl.textContent = job.logoText;
+      logoEl.style.backgroundColor = job.logoBg;
+
+      const sideLogo = document.getElementById('sideLogo');
+      sideLogo.textContent = job.logoText;
+      sideLogo.style.backgroundColor = job.logoBg;
+
+      document.getElementById('sideCompany').textContent = job.company;
+      document.getElementById('sideCategory').textContent = job.category;
+      document.getElementById('sideType').textContent = job.type;
+
+      if (job.responsibilities) {
+        document.getElementById('detailResponsibilities').innerHTML = job.responsibilities
+          .map(r => `<li class="mb-2">${r}</li>`).join('');
+      }
+
+      const bookmarks = JSON.parse(localStorage.getItem('udaanjobs_bookmarks') || '[]');
+      const saveBtn = document.getElementById('detailSaveBtn');
+      if (bookmarks.includes(String(job.id))) {
+        saveBtn.classList.add('active');
+        saveBtn.innerHTML = '<i class="bi bi-bookmark-fill text-danger"></i> Saved';
+      }
+    });
+  </script>
+</body>
+</html>

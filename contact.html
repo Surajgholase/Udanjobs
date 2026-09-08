@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Udaan Jobs for candidate support, bulk employer hiring, hiring partnerships, or enterprise recruitment inquiries.">
+  <title>Contact Us & Employer Support | Udaan Jobs</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-leap sticky-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-wordmark" href="index.html">
+        <div class="brand-icon"><img src="assets/img/logo.svg" alt="Udaan Jobs Logo"></div>
+        Udaan<span class="accent">Jobs</span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="jobs.html">Find Jobs</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="jobs.html" class="btn btn-leap-primary">Find Jobs</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <section class="bg-white border-bottom py-5">
+    <div class="container text-center max-w-600">
+      <span class="badge-leap badge-leap-coral mb-2">HUM HAIN AAPKE SAATH</span>
+      <h1 class="display-font fw-bold fs-1 mb-2">Get in Touch with Udaan Jobs</h1>
+      <p class="text-muted">Whether you are a jobseeker needing application help or an employer looking to hire staff at scale, our team is ready to assist.</p>
+    </div>
+  </section>
+
+  <!-- Main Contact Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left Contact Info Cards -->
+        <div class="col-lg-5">
+          
+          <div class="d-flex align-items-start gap-3 p-4 bg-white border rounded-4 mb-3">
+            <div class="category-icon bg-primary text-white" style="width: 48px; height: 48px; font-size: 1.25rem;"><i class="bi bi-geo-alt-fill"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Headquarters</h5>
+              <p class="text-muted small mb-0">Indiranagar Double Road, 100ft Road Axis, Bengaluru, Karnataka 560038</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 p-4 bg-white border rounded-4 mb-3">
+            <div class="category-icon text-white" style="background-color: var(--ch-magenta); width: 48px; height: 48px; font-size: 1.25rem;"><i class="bi bi-envelope-fill"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Email Support</h5>
+              <p class="text-muted small mb-0">Candidates: support@udaanjobs.com<br>Employers: hire@udaanjobs.com</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 p-4 bg-white border rounded-4 mb-3">
+            <div class="category-icon text-white" style="background-color: var(--ch-violet); width: 48px; height: 48px; font-size: 1.25rem;"><i class="bi bi-telephone-fill"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Employer Helpline</h5>
+              <p class="text-muted small mb-0">+91 (080) 4920-8800<br><span class="text-success fw-medium">Mon - Sat (9:00 AM - 7:00 PM IST)</span></p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Form Panel -->
+        <div class="col-lg-7">
+          <div class="bg-white border rounded-4 p-4 p-md-5">
+            <h3 class="fw-bold display-font fs-3 mb-2">Send Us a Message</h3>
+            <p class="text-muted small mb-4">Fill in your details below and our support team will get back to you within 24 hours.</p>
+
+            <div class="alert alert-success border-0 mb-4" id="contactSuccess" style="display: none;">
+              <i class="bi bi-check-circle-fill me-2"></i> Thank you! Your message has been received by Udaan Jobs support team.
+            </div>
+
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label small fw-bold">Your Name (Aapka Naam)</label>
+                  <input type="text" class="form-control" id="contactName" required placeholder="e.g. Ramesh Kumar">
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label small fw-bold">Email Address</label>
+                  <input type="email" class="form-control" id="contactEmail" required placeholder="name@company.com">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactPhone" class="form-label small fw-bold">Mobile Number</label>
+                  <input type="tel" class="form-control" id="contactPhone" required placeholder="+91 98765 43210">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactSubject" class="form-label small fw-bold">Reason for Inquiry</label>
+                  <select class="form-select" id="contactSubject" required>
+                    <option value="">Select Category</option>
+                    <option value="Employer Posting">Post a Job / Employer Bulk Hiring</option>
+                    <option value="Candidate Support">Candidate Application Help</option>
+                    <option value="WhatsApp Alert">WhatsApp Job Alert Help</option>
+                    <option value="Other">General Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label small fw-bold">Your Message</label>
+                  <textarea class="form-control" id="contactMessage" rows="4" required placeholder="Aap humse kya poochna chahte hain?"></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-leap-primary py-3 px-4 w-100 fs-6">
+                    Submit Message <i class="bi bi-send-fill ms-2"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-leap">
+    <div class="container text-center text-muted small">&copy; 2026 Udaan Jobs Technologies Pvt. Ltd. All rights reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

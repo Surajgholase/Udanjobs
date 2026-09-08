@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Udaan Jobs - Aapki Apni Direct Job App! Find verified job openings in Delivery, Field Sales, Telecalling, Operations, Retail, and Tech across India with 0 Rupee candidate fee.">
+  <title>Udaan Jobs | Aapki Apni Direct Job App - Delivery, Sales, Telecalling & Tech</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div id="announcementBar" class="d-flex align-items-center justify-content-between">
+    <div class="container text-center text-md-start">
+      <span class="badge bg-warning text-dark me-2">LIVE</span>
+      <span>🎉 Over <strong>10,000+ candidates</strong> got verified jobs this month on Udaan Jobs!</span>
+      <a href="jobs.html">Apply for openings &rarr;</a>
+    </div>
+    <button type="button" class="btn-close btn-close-white ms-2" id="dismissAnnouncement" aria-label="Close announcement"></button>
+  </div>
+
+  <!-- Header / Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-leap sticky-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-wordmark" href="index.html">
+        <div class="brand-icon"><img src="assets/img/logo.svg" alt="Udaan Jobs Logo"></div>
+        Udaan<span class="accent">Jobs</span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="jobs.html">Find Jobs</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="jobs.html" class="btn btn-leap-ghost">
+            <i class="bi bi-bookmark-heart text-danger fs-5"></i> Saved (<span id="savedJobsCount">0</span>)
+          </a>
+          <a href="contact.html" class="btn btn-leap-outline">Employer Hiring</a>
+          <a href="jobs.html" class="btn btn-leap-primary">Register Free</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        
+        <!-- Left Hero Content -->
+        <div class="col-lg-7">
+          <div class="hero-tag">
+            <span class="pulse-dot"></span>
+            India's #1 Direct Hiring App for Delivery, Sales & Tech
+          </div>
+
+          <h1 class="hero-title">
+            Aapki Apni Job App for <span class="text-gradient-coral">Direct Verified Hiring</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Skip fake recruiters and agency charges. Connect directly with 500+ top employers across India. 100% Free for candidates with instant HR calls.
+          </p>
+
+          <!-- Floating Overlapping Search Box -->
+          <div class="hero-search-box">
+            <form action="jobs.html" method="GET" class="hero-search-input-group">
+              <div class="hero-search-field">
+                <i class="bi bi-search"></i>
+                <input type="text" name="search" placeholder="Role (e.g. Sales, Delivery, Telecaller, Developer)..." aria-label="Search job title">
+              </div>
+              <div class="hero-search-field">
+                <i class="bi bi-geo-alt"></i>
+                <select name="location" aria-label="Select location">
+                  <option value="">All Cities</option>
+                  <option value="Bengaluru">Bengaluru</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Gurugram">Gurugram / NCR</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Remote">Remote</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-leap-primary px-4 py-3">
+                Search Jobs <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="d-flex align-items-center gap-4 text-muted small fw-semibold flex-wrap">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span><strong>15,000+</strong> Active Jobs</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-building-check text-primary fs-5"></i>
+              <span><strong>500+</strong> Verified Employers</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-whatsapp text-success fs-5"></i>
+              <span><strong>Direct HR Call</strong> & WhatsApp Alert</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Graphic & Floating Cards -->
+        <div class="col-lg-5">
+          <div class="hero-visual-wrapper">
+            <!-- Custom Abstract SVG Blob Background -->
+            <svg class="hero-svg-blob" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="blobGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF62BB" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#B331F1" stop-opacity="0.2"/>
+                </linearGradient>
+              </defs>
+              <path fill="url(#blobGrad)" d="M415.5,310.5Q389,371,332.5,404.5Q276,438,210,422.5Q144,407,95.5,357Q47,307,46.5,236Q46,165,99.5,119.5Q153,74,222.5,63Q292,52,354.5,89Q417,126,429.5,188Q442,250,415.5,310.5Z" />
+            </svg>
+
+            <!-- Floating Glass Badge 1 -->
+            <div class="floating-badge floating-badge-1">
+              <div class="company-logo-badge bg-primary text-white" style="width: 44px; height: 44px;">UJ</div>
+              <div>
+                <div class="fw-bold text-dark fs-7">Field Sales Executive</div>
+                <div class="text-success small fw-bold"><i class="bi bi-check-circle-fill"></i> Hired • ₹30,000/mo</div>
+              </div>
+            </div>
+
+            <!-- Main Central Card Mockup -->
+            <div class="hero-main-card">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="company-logo-badge" style="background: var(--ch-magenta); color: #fff;">UJ</div>
+                  <div>
+                    <h6 class="fw-bold mb-0">Udaan Express</h6>
+                    <small class="text-muted"><i class="bi bi-patch-check-fill text-primary"></i> Verified Employer</small>
+                  </div>
+                </div>
+                <span class="badge-leap badge-leap-teal">Urgent Hiring</span>
+              </div>
+              <h5 class="fw-bold mb-2 fs-5">B2B Field Onboarding Executive</h5>
+              <div class="d-flex gap-2 mb-3">
+                <span class="badge-leap badge-leap-blue">Bengaluru</span>
+                <span class="badge-leap badge-leap-amber">₹22,000 - ₹35,000/mo</span>
+              </div>
+              <div class="p-3 bg-light rounded-3 small text-secondary mb-3 border">
+                <i class="bi bi-quote text-coral fs-5"></i> Onboard local kirana merchants onto Udaan's B2B supply chain network.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted"><i class="bi bi-clock"></i> Active 5 mins ago</small>
+                <button class="btn btn-sm btn-leap-primary">Direct Apply</button>
+              </div>
+            </div>
+
+            <!-- Floating Glass Badge 2 -->
+            <div class="floating-badge floating-badge-2">
+              <div class="company-logo-badge bg-warning text-dark" style="width: 44px; height: 44px;"><i class="bi bi-telephone-fill text-dark"></i></div>
+              <div>
+                <div class="fw-bold text-dark fs-7">Direct HR Call</div>
+                <div class="text-muted small">Callback in &lt; 24 Hours</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo Strip -->
+  <section class="logo-strip">
+    <div class="container">
+      <p class="text-center text-muted small fw-bold mb-4 text-uppercase tracking-wider">Trusted by 500+ High-Growth Companies & Enterprises Across India</p>
+      <div class="row align-items-center justify-content-center g-4">
+        <div class="col-4 col-md-2 logo-strip-item"><i class="bi bi-box-seam me-2"></i> Udaan Express</div>
+        <div class="col-4 col-md-2 logo-strip-item"><i class="bi bi-truck me-2"></i> Brightline</div>
+        <div class="col-4 col-md-2 logo-strip-item"><i class="bi bi-shop me-2"></i> Nova Retail</div>
+        <div class="col-4 col-md-2 logo-strip-item"><i class="bi bi-headset me-2"></i> Astra Finance</div>
+        <div class="col-4 col-md-2 logo-strip-item"><i class="bi bi-arrow-repeat me-2"></i> Kaveri Logistics</div>
+        <div class="col-4 col-md-2 logo-strip-item"><i class="bi bi-stripe me-2"></i> Zennith Tech</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center max-w-600 mx-auto mb-5 reveal-on-scroll">
+        <span class="badge-leap badge-leap-coral mb-2">AASAAN 4-STEP PROCESS</span>
+        <h2 class="display-font fw-bold fs-1">How Udaan Jobs Works For You</h2>
+        <p class="text-muted">Naukri pana aasaan hai! Apply directly to verified employers in four quick steps.</p>
+      </div>
+
+      <div class="row g-4 step-connector-row">
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h4 class="fw-bold mb-2">Profile Banayein</h4>
+            <p class="text-muted small">Enter your name, city, preferred role, and monthly salary expectations in 2 minutes.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h4 class="fw-bold mb-2">Job Search & Match</h4>
+            <p class="text-muted small">Find matching verified jobs in Delivery, Sales, Telecalling, Accounts, or Tech.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h4 class="fw-bold mb-2">Direct HR Call</h4>
+            <p class="text-muted small">Apply directly to company HR managers without third-party recruitment agencies.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <div class="step-card">
+            <div class="step-number">04</div>
+            <h4 class="fw-bold mb-2">Naukri Payein</h4>
+            <p class="text-muted small">Get interview status updates on WhatsApp and start your new job quickly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Stats Counter (Dark Band) -->
+  <section class="section-padding dark-stats-band">
+    <div class="container relative-z">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number text-gradient-coral" data-target="15200" data-suffix="+">0</div>
+            <div class="stat-label">Active Openings</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number text-gradient-teal" data-target="520" data-suffix="+">0</div>
+            <div class="stat-label">Verified Employers</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number text-warning" data-target="54000" data-suffix="+">0</div>
+            <div class="stat-label">Candidates Placed</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number" data-target="45" data-suffix=" Cities">0</div>
+            <div class="stat-label">Cities Covered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Job Categories -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-5 reveal-on-scroll">
+        <div>
+          <span class="badge-leap badge-leap-teal mb-2">JOB CATEGORIES</span>
+          <h2 class="display-font fw-bold fs-1 mb-0">Popular Categories on Udaan Jobs</h2>
+        </div>
+        <a href="jobs.html" class="btn btn-leap-outline mt-3 mt-md-0">View All Categories &rarr;</a>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <a href="jobs.html?category=Delivery" class="category-card">
+            <div class="category-icon" style="background: var(--accent-coral-subtle); color: var(--ch-magenta-dark);"><i class="bi bi-truck"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Delivery & Logistics</h5>
+              <span class="text-muted small">4,120+ Openings</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <a href="jobs.html?category=Sales" class="category-card">
+            <div class="category-icon" style="background: var(--accent-teal-subtle); color: var(--ch-violet);"><i class="bi bi-graph-up-arrow"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Field Sales & BD</h5>
+              <span class="text-muted small">3,850+ Openings</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <a href="jobs.html?category=Telecalling" class="category-card">
+            <div class="category-icon" style="background: var(--accent-amber-subtle); color: #B56C2B;"><i class="bi bi-headset"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Telecalling & Support</h5>
+              <span class="text-muted small">2,640+ Openings</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <a href="jobs.html?category=IT" class="category-card">
+            <div class="category-icon" style="background: var(--accent-coral-subtle); color: var(--ch-magenta);"><i class="bi bi-code-slash"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">IT & Software</h5>
+              <span class="text-muted small">1,940+ Openings</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <a href="jobs.html?category=Retail" class="category-card">
+            <div class="category-icon" style="background: var(--accent-teal-subtle); color: var(--ch-violet);"><i class="bi bi-shop"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Retail Store & Billing</h5>
+              <span class="text-muted small">1,420+ Openings</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <a href="jobs.html?category=Marketing" class="category-card">
+            <div class="category-icon" style="background: var(--accent-amber-subtle); color: #B56C2B;"><i class="bi bi-megaphone"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Marketing & Promotion</h5>
+              <span class="text-muted small">1,150+ Openings</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <a href="jobs.html?category=Finance" class="category-card">
+            <div class="category-icon" style="background: var(--accent-coral-subtle); color: var(--ch-magenta);"><i class="bi bi-currency-rupee"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">Finance & Accounts</h5>
+              <span class="text-muted small">980+ Openings</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 reveal-on-scroll">
+          <a href="jobs.html?category=HR" class="category-card">
+            <div class="category-icon" style="background: var(--accent-teal-subtle); color: var(--ch-violet);"><i class="bi bi-people"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1 fs-6">HR & Operations</h5>
+              <span class="text-muted small">860+ Openings</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Job Listings Grid -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center max-w-600 mx-auto mb-5 reveal-on-scroll">
+        <span class="badge-leap badge-leap-coral mb-2">VERIFIED OPENINGS</span>
+        <h2 class="display-font fw-bold fs-1">Latest Jobs on Udaan Jobs</h2>
+        <p class="text-muted">Apply directly to high-paying positions with verified response SLAs.</p>
+      </div>
+
+      <div class="row g-4" id="featuredJobsContainer">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="jobs.html" class="btn btn-leap-primary btn-lg">
+          Explore All 15,000+ Jobs <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section (Asymmetric Bento Grid) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center max-w-600 mx-auto mb-5 reveal-on-scroll">
+        <span class="badge-leap badge-leap-teal mb-2">WHY UDAAN JOBS</span>
+        <h2 class="display-font fw-bold fs-1">Designed For Direct Hiring Success</h2>
+        <p class="text-muted">No agencies, zero candidate fee. A transparent platform engineered for instant job connect.</p>
+      </div>
+
+      <div class="bento-grid reveal-on-scroll">
+        
+        <!-- Bento 1 (Span 8) -->
+        <div class="bento-item bento-col-8">
+          <div class="bento-icon-wrapper"><i class="bi bi-shield-check"></i></div>
+          <h3 class="fw-bold fs-4 mb-2">100% Verified Employers & 0 Fee Guarantee</h3>
+          <p class="text-muted mb-4" style="max-width: 480px;">
+            Every hiring company undergoes manual verification to confirm active GST, physical office hubs, and confirmed payroll capacity.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge-leap badge-leap-teal"><i class="bi bi-check2"></i> 0 Rupee Candidate Fee</span>
+            <span class="badge-leap badge-leap-blue"><i class="bi bi-check2"></i> Transparent Monthly CTC</span>
+            <span class="badge-leap badge-leap-amber"><i class="bi bi-check2"></i> Direct HR Connect</span>
+          </div>
+          <div class="bento-shape-accent"></div>
+        </div>
+
+        <!-- Bento 2 (Span 4) -->
+        <div class="bento-item bento-col-4">
+          <div class="bento-icon-wrapper" style="color: var(--ch-violet);"><i class="bi bi-telephone-outbound-fill"></i></div>
+          <h3 class="fw-bold fs-4 mb-2">Direct HR Phone Call</h3>
+          <p class="text-muted small">
+            Connect directly with hiring managers without waiting days for resume screening emails.
+          </p>
+        </div>
+
+        <!-- Bento 3 (Span 4) -->
+        <div class="bento-item bento-col-4">
+          <div class="bento-icon-wrapper" style="color: #B56C2B;"><i class="bi bi-whatsapp"></i></div>
+          <h3 class="fw-bold fs-4 mb-2">WhatsApp Job Alerts</h3>
+          <p class="text-muted small">
+            Get instant WhatsApp notifications when new matching jobs open in your city.
+          </p>
+        </div>
+
+        <!-- Bento 4 (Span 8) -->
+        <div class="bento-item bento-col-8">
+          <div class="bento-icon-wrapper" style="color: var(--ch-magenta);"><i class="bi bi-radar"></i></div>
+          <h3 class="fw-bold fs-4 mb-2">Real-Time Application Tracker</h3>
+          <p class="text-muted mb-3" style="max-width: 520px;">
+            Track your application status from submission to HR review, interview schedule, and final offer letter.
+          </p>
+          <div class="progress" style="height: 10px; border-radius: 5px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex justify-content-between small text-muted mt-2">
+            <span>Applied</span>
+            <span>HR Shortlisted</span>
+            <strong class="text-success">Interview Called</strong>
+            <span>Selected</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center max-w-600 mx-auto mb-5 reveal-on-scroll">
+        <span class="badge-leap badge-leap-coral mb-2">CANDIDATE REVIEWS</span>
+        <h2 class="display-font fw-bold fs-1">Trusted By Jobseekers Across India</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="testimonial-card">
+            
+            <div class="testimonial-slide">
+              <div class="text-warning mb-3 fs-5">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Udaan Jobs app helped me get a Field Sales Executive job at Udaan Express in Bengaluru within 2 days! Direct HR call came right after applying."
+              </p>
+              <div class="testimonial-user">
+                <div class="user-avatar">RS</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Rakesh Sharma</h6>
+                  <small class="text-muted">Field Sales Executive at Udaan Express (Bengaluru)</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" style="display: none;">
+              <div class="text-warning mb-3 fs-5">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Finding verified delivery jobs without agency fraud was hard. On Udaan Jobs, I got direct hiring at Brightline Logistics with full salary transparency."
+              </p>
+              <div class="testimonial-user">
+                <div class="user-avatar" style="background-color: var(--accent-teal-subtle); color: var(--ch-violet);">MS</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Manish Singh</h6>
+                  <small class="text-muted">Delivery Fleet Lead at Brightline Logistics (Mumbai)</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" style="display: none;">
+              <div class="text-warning mb-3 fs-5">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Zero charges, fast WhatsApp updates, and polite company HRs. Udaan Jobs is truly the best job platform for freshers in India."
+              </p>
+              <div class="testimonial-user">
+                <div class="user-avatar" style="background-color: var(--accent-amber-subtle); color: #B56C2B;">PP</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Pooja Patel</h6>
+                  <small class="text-muted">Telecalling Executive at Astra Financial (Gurugram)</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-dots" id="testimonialDots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Bootstrap Accordion) -->
+  <section class="section-padding">
+    <div class="container max-w-800">
+      <div class="text-center mb-5 reveal-on-scroll">
+        <span class="badge-leap badge-leap-teal mb-2">SAWAAL AUR JAWAAB</span>
+        <h2 class="display-font fw-bold fs-1">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="accordion accordion-leap reveal-on-scroll" id="faqAccordion">
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+              Kya Udaan Jobs candidates ke liye bilkul free hai?
+            </button>
+          </h2>
+          <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Haan, 100% Free! Udaan Jobs par job apply karne, profile banane ya interview ke liye koi bhi fees nahi li jaati. Zero Rupee fee guaranteed!
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+              Udaan Jobs par company HR se direct call kaise milta hai?
+            </button>
+          </h2>
+          <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Jaise hi aap job apply karte hain, aapka profile seedha verified company HR ke dashboard par jaata hai. Shortlist hone par HR aapko direct call karte hain.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+              Kaun-kaun si job categories yahan available hain?
+            </button>
+          </h2>
+          <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Delivery Executive, Field Sales, Telecalling & Support, Warehouse Staff, Driver, IT/Software, Retail Sales, Accounts aur HR roles ki hajaron openings available hain.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+              Kya Freshers bhi apply kar sakte hain?
+            </button>
+          </h2>
+          <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Ji haan! 60% se jyada openings freshers aur 10th/12th pass candidates ke liye available hain jinme training company dwara di jaati hai.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="cta-band reveal-on-scroll">
+        <h2 class="display-font fw-bold fs-1 mb-3 text-white">Aaj Hi Apni Dream Job Payein!</h2>
+        <p class="fs-5 mb-4 text-white opacity-90 mx-auto" style="max-width: 600px;">
+          Join 54,000+ candidates who found verified direct jobs on Udaan Jobs.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="jobs.html" class="btn btn-cta-light btn-lg">Search Jobs Now <i class="bi bi-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-cta-glass btn-lg">Post a Job (Employers)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Column Footer -->
+  <footer class="footer-leap">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand navbar-brand-wordmark text-white mb-3" href="index.html">
+            <div class="brand-icon"><img src="assets/img/logo.svg" alt="Udaan Jobs Logo"></div>
+            Udaan<span class="accent">Jobs</span>
+          </a>
+          <p class="small mb-4">
+            India's leading direct job platform matching candidates with verified employers in Delivery, Sales, Operations, and Tech.
+          </p>
+          <div class="d-flex gap-3 fs-5 text-white opacity-90">
+            <a href="#" aria-label="LinkedIn" class="text-white"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Twitter" class="text-white"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram" class="text-white"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube" class="text-white"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>For Candidates</h5>
+          <ul class="footer-links">
+            <li><a href="jobs.html">Browse All Jobs</a></li>
+            <li><a href="jobs.html?category=Delivery">Delivery Jobs</a></li>
+            <li><a href="jobs.html?category=Sales">Field Sales Jobs</a></li>
+            <li><a href="jobs.html?category=Telecalling">Telecalling Roles</a></li>
+            <li><a href="jobs.html?category=IT">Tech & Software</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>For Employers</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Post a Job</a></li>
+            <li><a href="about.html">Bulk Hiring</a></li>
+            <li><a href="about.html">Verified Employers</a></li>
+            <li><a href="contact.html">Employer Support</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5>Subscribe to WhatsApp Job Alerts</h5>
+          <p class="small">Get daily verified job matches directly on your phone.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Udaan Jobs alerts!');">
+            <input type="email" placeholder="Enter your email address" required aria-label="Email for job alerts">
+            <button type="submit" class="btn btn-leap-primary py-2 px-3">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 Udaan Jobs Technologies Pvt. Ltd. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS Engine -->
+  <script src="js/main.js"></script>
+</body>
+</html>
